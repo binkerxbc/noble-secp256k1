@@ -33,7 +33,7 @@
     "crypto": false
   },
   "dependencies": {
-    "big-integer": "^v1.6.51",
+    "big-integer": "^v1.6.51"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.0",
