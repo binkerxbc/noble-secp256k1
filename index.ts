@@ -1,6 +1,18 @@
 /*! noble-secp256k1 - MIT License (c) Paul Miller (paulmillr.com) */
 
 import nodeCrypto from 'crypto';
+const bi = require('big-integer');
+
+function BigInt(value) {
+    if (typeof value === 'string') {
+        const match = value.match(/^0([xo])([0-9a-f]+)$/i)
+        if (match) {
+            return bi(match[2], match[1].toLowerCase() === 'x' ? 16 : 8)
+        }
+    }
+    return bi(value)
+}
+
 
 const _0n = BigInt(0);
 const _1n = BigInt(1);
