@@ -3,7 +3,7 @@
 import nodeCrypto from 'crypto';
 const bi = require('big-integer');
 
-function BigInt(value) {
+function BigInt(value: any) {
     if (typeof value === 'string') {
         const match = value.match(/^0([xo])([0-9a-f]+)$/i)
         if (match) {
